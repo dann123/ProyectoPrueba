@@ -11,5 +11,9 @@ package pe.edu.upeu.prueba.modelo;
  * @author alum.fial7
  */
 public class Iglesia {
+      private int idd;
+private int idr;
+private String dist;
+private String estado;
     
 }
