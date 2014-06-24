@@ -6,6 +6,9 @@
 
 package pe.edu.upeu.prueba.modelo;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author alum.fial7
@@ -37,5 +40,11 @@ public class TipoIglesia {
     public void setNom_tipo(String nom_tipo) {
         this.nom_tipo = nom_tipo;
     }
-    
+    public static TipoIglesia loadTipoIglesia (ResultSet rs) throws SQLException{
+TipoIglesia t= new TipoIglesia();
+t.setIdti(rs.getInt ("idtipo_iglesia"));
+t.setNom_tipo(rs.getString ("tipo_iglesia"));
+
+    return t;
+}
 }
